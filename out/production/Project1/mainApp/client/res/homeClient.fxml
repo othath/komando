@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.homeClientController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="402.0" layoutY="35.0" prefHeight="58.0" prefWidth="196.0" text="HOME CLIENT" textAlignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="id" layoutX="491.0" layoutY="165.0" text="id" />
+      <Label fx:id="first" layoutX="486.0" layoutY="219.0" text="first" />
+      <Label fx:id="last" layoutX="491.0" layoutY="259.0" text="last" />
+      <Label fx:id="email" layoutX="486.0" layoutY="300.0" text="email" />
+      <Button fx:id="btn" layoutX="458.0" layoutY="391.0" mnemonicParsing="false" onAction="#btn" text="DisplayClient" />
+   </children>
+</AnchorPane>

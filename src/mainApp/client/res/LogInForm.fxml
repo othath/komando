@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="50" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.LogInController">
+    <VBox fx:id="firstColumn" alignment="CENTER_LEFT" prefHeight="600" prefWidth="500" spacing="30" styleClass="firstColumn" GridPane.columnIndex="1">
+        <Text fx:id="title" styleClass="Title" text="Sign In :" />
+        <TextField fx:id="fullNameField" managed="false" prefHeight="40" promptText="Full Name" styleClass="textField" visible="false" />
+        <TextField fx:id="emailField" prefHeight="40" promptText="Email" styleClass="textField" />
+        <PasswordField fx:id="passwordField" prefHeight="40" promptText="Password" styleClass="textField" />
+        <PasswordField fx:id="confirmPasswordField" managed="false" prefHeight="40" promptText="Confirm Password" styleClass="textField" visible="false" />
+      <Label fx:id="userMessage" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="498.0" textAlignment="CENTER" textFill="#ff0404">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <Button fx:id="signInOrUp" onAction="#ConnectBtn" prefHeight="40" prefWidth="200" styleClass="signInOrUp" text="Sign In" translateX="150" />
+        <VBox alignment="CENTER" spacing="10" styleClass="someText">
+            <Text fx:id="forgotPassword" text="Forgot Password?" />
+            <HBox alignment="CENTER">
+                <Text fx:id="question" text="New to Komando ?" />
+                <Text fx:id="joinNow" onMouseClicked="#startAnimation" styleClass="joinNow" text="Join Now" translateX="5" />
+            </HBox>
+        </VBox>
+      <Label fx:id="message" alignment="CENTER" prefHeight="17.0" prefWidth="500.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+    </VBox>
+    <VBox fx:id="secondColumn" alignment="CENTER" prefHeight="600" prefWidth="400" spacing="20" styleClass="secondColumn">
+        <Text styleClass="appName" text="Komando" />
+        <Text styleClass="description" text="Manage your orders easily" />
+    </VBox>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
