@@ -6,10 +6,10 @@ public class dbConnector {
     public Connection databaseLink;
 
     public Connection getConnection(){
-        String databaseName = "javafx";
-        String databaseUser = "root";
-        String databasePassword = "";
-        String url = "jdbc:mysql://localhost/"+databaseName;
+        String databaseName = "hLfbfPAkUv";
+        String databaseUser = "hLfbfPAkUv";
+        String databasePassword = "3EudZO39fL";
+        String url = "jdbc:mysql://remotemysql.com/"+databaseName;
 
 
         try {
