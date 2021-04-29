@@ -1,0 +1,57 @@
+Pane{
+       -fx-background-color: linear-gradient(to top right, #31D35C, #2BB7DA);
+}
+.dashBoard{
+       -fx-background-color: transparent;
+       -fx-font-size: 20px;
+}
+.clientsInfo{
+       -fx-background-color: transparent;
+       -fx-font-size: 20px;
+       -fx-cursor: pointer;
+}
+.orders{
+       -fx-background-color: transparent;
+       -fx-font-size: 20px;
+}
+.inventory{
+       -fx-background-color: transparent;
+       -fx-font-size: 20px;
+}
+.dashBoard:hover,.clientsInfo:hover,.orders:hover,.inventory:hover{
+       -fx-background-color: teal;
+       -fx-cursor: pointer;
+}
+.salesActivity,.salesRevenue,.qteSold{
+-fx-font-size: 18px;
+-fx-font-weight:bold;
+}
+.shippedMenuItem,.outMenuItem,.paymentMenuItem,.allMenuItem{
+       -fx-font-size: 10px;
+       -fx-text-alignment:center;
+       -fx-padding-left:0 15px;
+}
+.shippedMenuItem{
+       
+       -fx-text-fill: red;
+       -fx-background-color:green;
+}
+.outMenuItem:active,.paymentMenuItem:active,.allMenuItem:active{
+       
+       -fx-background-color:red;
+}
+
+.outMenuItem:hover,.paymentMenuItem:hover,.allMenuItem:hover{
+       
+       -fx-background-color:rgb(157, 255, 0);
+}
+items:active{
+
+  -fx-background-color:red;
+}
+.numberOrder,.priceOrder,.numberPcs,.info{
+       -fx-border-width: 1;
+    -fx-border-color: #31D35C;
+    -fx-border-radius: 20px;
+  
+}

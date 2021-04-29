@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="menuInterface" prefHeight="469.0" prefWidth="233.0">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="172.0" layoutX="24.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../src/mainApp/res/images/KOMANDO1.png" />
+               </image>
+            </ImageView>
+            <MenuButton fx:id="orders" alignment="CENTER" layoutY="281.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="233.0" styleClass="orders" text="Orders">
+              <items>
+                <MenuItem fx:id="allMenuItem" mnemonicParsing="false" styleClass="allMenuItem" text="ALL" />
+                <MenuItem fx:id="paymentMenuItem" mnemonicParsing="false" styleClass="paymentMenuItem" text="Payment required" />
+                  <MenuItem fx:id="outMenuItem" mnemonicParsing="false" style="-fx-margin: 50px;" styleClass="outMenuItem" text="Out of Stock" />
+                  <MenuItem fx:id="shippedMenuItem" styleClass="shippedMenuItem" text="Shipped" />
+              </items>
+            </MenuButton>
+            <Button fx:id="dashBoard" layoutX="-1.0" layoutY="153.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="233.0" styleClass="dashBoard" text="DashBoard" />
+            <Button fx:id="clientsInfo" layoutX="-1.0" layoutY="216.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="233.0" styleClass="clientsInfo" text="Clients info" />
+            <Button fx:id="inventory" layoutX="-1.0" layoutY="347.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="233.0" styleClass="inventory" text="Inventory" />
+            <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="17.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../src/mainApp/res/images/dashboard.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="17.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../src/mainApp/res/images/customer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="31.0" layoutX="17.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../src/mainApp/res/images/checklist.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="25.0" layoutX="17.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../src/mainApp/res/images/shipping.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="showInterface" layoutX="233.0" prefHeight="469.0" prefWidth="571.0">
+         <children>
+            <Label fx:id="numberOrder" alignment="CENTER" layoutX="35.0" layoutY="51.0" prefHeight="72.0" prefWidth="119.0" styleClass="numberOrder" text="info " />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="151.0" prefHeight="289.0" prefWidth="498.0" styleClass="info" text="INFO" textAlignment="RIGHT" />
+            <Label fx:id="priceOrder" alignment="CENTER" layoutX="212.0" layoutY="51.0" prefHeight="72.0" prefWidth="119.0" styleClass="priceOrder" text="info " />
+            <Label fx:id="numberPcs" alignment="CENTER" layoutX="384.0" layoutY="51.0" prefHeight="72.0" prefWidth="119.0" styleClass="numberPcs" text="info " />
+            <Label fx:id="qteSold" layoutX="404.0" layoutY="10.0" prefHeight="31.0" prefWidth="141.0" styleClass="qteSold" text="Quantity sold" />
+            <Label fx:id="salesRevenue" layoutX="225.0" layoutY="10.0" prefHeight="31.0" prefWidth="119.0" styleClass="salesRevenue" text="Sales revenue" />
+            <Label fx:id="salesActivity" layoutX="46.0" layoutY="10.0" prefHeight="31.0" prefWidth="119.0" styleClass="salesActivity" text="Sales activity" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
