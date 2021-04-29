@@ -5,24 +5,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.AppSelectorController">
+<AnchorPane prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.AppSelectorController">
    <children>
       <Pane layoutX="75.0" layoutY="83.0" prefHeight="213.0" prefWidth="208.0" style="-fx-background-color: linear-gradient(to top right, #31D35C, #2BB7DA);" />
-      <Button layoutX="86.0" layoutY="82.0" mnemonicParsing="false" opacity="0.0" prefHeight="226.0" prefWidth="187.0" style="-fx-background-color: black;" textFill="#070707">
+      <Button fx:id="adminBtn" layoutX="86.0" layoutY="82.0" mnemonicParsing="false" onAction="#adminScene" opacity="0.0" prefHeight="226.0" prefWidth="187.0" style="-fx-background-color: black;" textFill="#070707">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Button>
       <ImageView fitHeight="213.0" fitWidth="208.0" layoutX="75.0" layoutY="83.0">
          <image>
-            <Image url="@admin.png" />
+            <Image url="@../../../../../src/mainApp/res/admin.png" />
          </image>
       </ImageView>
       <Pane layoutX="351.0" prefHeight="403.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to top right, #31D35C, #2BB7DA);">
          <children>
             <ImageView fitHeight="213.0" fitWidth="268.0" layoutX="24.0" layoutY="89.0">
                <image>
-                  <Image url="@client.png" />
+                  <Image url="@../../../../../src/mainApp/res/client.png" />
                </image>
             </ImageView>
             <Button fx:id="clientBtn" layoutX="45.0" layoutY="59.0" mnemonicParsing="false" onAction="#clientScene" opacity="0.0" prefHeight="286.0" prefWidth="268.0" style="-fx-background-color: #31D35C;" textFill="WHITE">
