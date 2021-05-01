@@ -1,21 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.homeClientController">
+<StackPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.homeClientController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="402.0" layoutY="35.0" prefHeight="58.0" prefWidth="196.0" text="HOME CLIENT" textAlignment="CENTER">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label fx:id="id" layoutX="491.0" layoutY="165.0" text="id" />
-      <Label fx:id="first" layoutX="486.0" layoutY="219.0" text="first" />
-      <Label fx:id="last" layoutX="491.0" layoutY="259.0" text="last" />
-      <Label fx:id="email" layoutX="486.0" layoutY="300.0" text="email" />
-      <Button fx:id="btn" layoutX="458.0" layoutY="391.0" mnemonicParsing="false" onAction="#btn" text="DisplayClient" />
+      <ScrollPane hbarPolicy="NEVER" prefHeight="1225.0" prefWidth="1010.0">
+         <content>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1229.0" prefWidth="1011.0" style="-fx-background-color: #E5E5E5; -fx-padding: 20px; -fx-spacing: 10px;" stylesheets="@clientHome.css">
+               <children>
+                  <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-padding: 20px;">
+                     <children>
+                        <Pane prefHeight="60.0" prefWidth="271.0">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="165.0" layoutX="7.0" layoutY="18.0">
+                                 <image>
+                                    <Image url="@images/KOMANDO.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="60.0" prefWidth="694.0">
+                           <children>
+                              <ImageView fitHeight="58.0" fitWidth="594.0" layoutX="24.0" layoutY="1.0">
+                                 <image>
+                                    <Image url="@images/Search_bar.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField focusTraversable="false" layoutX="41.0" layoutY="7.0" prefHeight="39.0" prefWidth="523.0" promptText="What are you looking for" style="-fx-border-color: #fff;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="68.0" layoutY="5.0">
+                                 <image>
+                                    <Image url="@images/User_Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="400.0" prefWidth="1000.0">
+                     <children>
+                        <Pane prefHeight="316.0" prefWidth="238.0">
+                           <children>
+                              <ImageView fitHeight="390.0" fitWidth="215.0" layoutX="12.0" layoutY="7.0">
+                                 <image>
+                                    <Image url="@images/Categories.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="menClothes" layoutX="17.0" layoutY="65.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="womenClothes" layoutX="17.0" layoutY="104.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="mobiles" layoutX="18.0" layoutY="143.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="laptops" layoutX="17.0" layoutY="183.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="watches" layoutX="17.0" layoutY="222.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="computers" layoutX="18.0" layoutY="261.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="sportHobbies" layoutX="17.0" layoutY="300.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="superMarket" layoutX="18.0" layoutY="347.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="400.0" prefWidth="763.0">
+                           <children>
+                              <Pane layoutY="14.0" prefHeight="374.0" prefWidth="749.0" style="-fx-background-color: gray; -fx-background-radius: 5px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 2, 2);">
+                                 <children>
+                                    <Button fx:id="rightArrow" layoutX="704.0" layoutY="170.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="44.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <Button fx:id="leftArrow" layoutY="172.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="44.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="169.0" prefWidth="991.0">
+                     <children>
+                        <ImageView fitHeight="174.0" fitWidth="990.0" layoutX="-9.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@images/adBanner.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <VBox prefHeight="230.0" prefWidth="971.0" style="-fx-background-color: #fff; -fx-background-radius: 5px; -fx-padding: 10px 20px;">
+                     <children>
+                        <Label text="Promotion">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="226.0" prefWidth="931.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="230.0" prefWidth="971.0" style="-fx-background-color: #fff; -fx-background-radius: 5px; -fx-padding: 10px 20px;">
+                     <children>
+                        <Label text="Trending">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="226.0" prefWidth="931.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button fx:id="moreBtn" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 50%; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 2, 2);" stylesheets="@clientHome.css" StackPane.alignment="BOTTOM_RIGHT">
+         <StackPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </StackPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
-</AnchorPane>
+</StackPane>
