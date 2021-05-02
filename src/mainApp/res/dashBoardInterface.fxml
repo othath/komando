@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="showInterface" prefHeight="469.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="showInterface" prefHeight="469.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.dashBoardController">
    <children>
       <Label fx:id="numberOrder" alignment="CENTER" layoutX="35.0" layoutY="51.0" prefHeight="72.0" prefWidth="119.0" styleClass="numberOrder" text="info " />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="151.0" prefHeight="289.0" prefWidth="498.0" styleClass="info" text="INFO" textAlignment="RIGHT" />
       <Label fx:id="priceOrder" alignment="CENTER" layoutX="212.0" layoutY="51.0" prefHeight="72.0" prefWidth="119.0" styleClass="priceOrder" text="info " />
-      <Label fx:id="numberPcs" alignment="CENTER" layoutX="384.0" layoutY="51.0" prefHeight="72.0" prefWidth="119.0" styleClass="numberPcs" text="info " />
+      <Label fx:id="QteInfo" alignment="CENTER" layoutX="384.0" layoutY="51.0" prefHeight="72.0" prefWidth="119.0" styleClass="numberPcs" text="info " />
       <Label fx:id="qteSold" layoutX="404.0" layoutY="10.0" prefHeight="31.0" prefWidth="141.0" styleClass="qteSold" text="Quantity sold" />
       <Label fx:id="salesRevenue" layoutX="225.0" layoutY="10.0" prefHeight="31.0" prefWidth="119.0" styleClass="salesRevenue" text="Sales revenue" />
       <Label fx:id="salesActivity" layoutX="46.0" layoutY="10.0" prefHeight="31.0" prefWidth="119.0" styleClass="salesActivity" text="Sales activity" />

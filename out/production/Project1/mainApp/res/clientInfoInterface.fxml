@@ -4,19 +4,19 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.clientInterfaceController">
    <children>
       <Button layoutX="102.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="NEW CLIENT" />
       <Button layoutX="231.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="FIND CLIENT" />
       <Button layoutX="362.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="101.0" text="MODIFY CLIENT" />
       <AnchorPane layoutX="23.0" layoutY="108.0" prefHeight="333.0" prefWidth="554.0">
          <children>
-            <TableView layoutX="26.0" prefHeight="218.0" prefWidth="479.0" style="visibility: visible; -fx-border-width: 0;" tableMenuButtonVisible="true">
+            <TableView fx:id="table" layoutX="26.0" prefHeight="218.0" prefWidth="479.0" style="visibility: visible; -fx-border-width: 0;" tableMenuButtonVisible="true">
               <columns>
-                <TableColumn prefWidth="123.0" style="-fx-padding: 15px;" text="NAME" />
-                <TableColumn prefWidth="137.0" text="PHOME NUMBER" />
-                  <TableColumn minWidth="0.0" prefWidth="133.0" text="EMAIL" />
-                  <TableColumn minWidth="0.0" prefWidth="91.0" text="GENDER" />
+                <TableColumn fx:id="nameCol" prefWidth="123.0" style="-fx-padding: 15px;" text="NAME" />
+                <TableColumn fx:id="pass" prefWidth="137.0" text="PHOME NUMBER" />
+                  <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="133.0" text="EMAIL" />
+                  <TableColumn fx:id="dateRe" minWidth="0.0" prefWidth="91.0" text="GENDER" />
               </columns>
                <effect>
                   <ColorAdjust />
@@ -24,6 +24,7 @@
             </TableView>
             <CheckBox layoutX="34.0" layoutY="6.0" mnemonicParsing="false" />
             <CheckBox layoutX="34.0" layoutY="47.0" mnemonicParsing="false" />
+            <Label fx:id="l" layoutX="142.0" layoutY="245.0" text="Label" />
          </children>
       </AnchorPane>
    </children>
