@@ -23,12 +23,11 @@ public class adminController implements Initializable {
             AnchorPane New= FXMLLoader.load(this.getClass().getResource("res/clientInfoInterface.fxml"));
             showInterface.getChildren().setAll(New);
             // Stage thisStage = (Stage)this.clientsInfo.getScene().getWindow();
-            // thisStage.setScene(scene);
+        // thisStage.setScene(scene);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         AnchorPane New= null;
         try {
             New = FXMLLoader.load(this.getClass().getResource("res/dashBoardInterface.fxml"));

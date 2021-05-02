@@ -3,7 +3,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.clientInterfaceController">
    <children>
       <Button layoutX="102.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="NEW CLIENT" />
