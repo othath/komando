@@ -1,0 +1,14 @@
+#leftArrow{
+    -fx-background-image: url("images/LeftArrow.png");
+    -fx-background-repeat: stretch;
+}
+
+#rightArrow{
+    -fx-background-image: url("images/rightArrow.png");
+    -fx-background-repeat: stretch;
+}
+
+#moreBtn{
+    -fx-background-image: url("images/Options.png");
+        -fx-background-repeat: stretch;
+}
