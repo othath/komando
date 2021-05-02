@@ -37,7 +37,6 @@ public class clientInterfaceController implements Initializable {
         Statement stmt = null;
         try {
             stmt = conDB.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-
         String sql = "select * from client";
         ResultSet res = stmt.executeQuery(sql);
         res.next();
