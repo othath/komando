@@ -88,11 +88,11 @@ public class homeClientController{
     private boolean clickedOnceSide=false;
     public void start_transition (){
         if (!clickedOnceSide){
-            profileTransition(-300);
+            profileTransition(-250);
             clickedOnceSide=true;
         }
         else {
-            profileTransition(300);
+            profileTransition(250);
             clickedOnceSide=false;
         }
     }
