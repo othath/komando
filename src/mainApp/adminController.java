@@ -3,14 +3,16 @@ package mainApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
+import javafx.fxml.Initializable;
+
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class adminController {
+public class adminController implements Initializable {
 
         @FXML
         private Button clientsInfo;
@@ -20,8 +22,21 @@ public class adminController {
             AnchorPane New= FXMLLoader.load(this.getClass().getResource("res/clientInfoInterface.fxml"));
             showInterface.getChildren().setAll(New);
             // Stage thisStage = (Stage)this.clientsInfo.getScene().getWindow();
-            // thisStage.setScene(scene);
+        // thisStage.setScene(scene);
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        AnchorPane New= null;
+        try {
+            New = FXMLLoader.load(this.getClass().getResource("res/dashBoardInterface.fxml"));
+
+        showInterface.getChildren().setAll(New);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void dashBoard(ActionEvent e) throws IOException{
         AnchorPane New= FXMLLoader.load(this.getClass().getResource("res/dashBoardInterface.fxml"));
         showInterface.getChildren().setAll(New);
