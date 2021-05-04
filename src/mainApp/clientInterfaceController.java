@@ -1,10 +1,12 @@
 package mainApp;
 
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -27,39 +29,48 @@ public class clientInterfaceController implements Initializable {
     @FXML private TableView<clientInfo> table;
     @FXML private TableColumn<clientInfo,String> pass;
     @FXML private TableColumn<clientInfo,String> dateRe;
-    @FXML private Label l;
+    @FXML private TableColumn<clientInfo,CheckBox> selectCol;
+
     dbConnector connect = new dbConnector();
     Connection conDB = connect.getConnection();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        Statement stmt = null;
-        try {
-            stmt = conDB.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-        String sql = "select * from client";
-        ResultSet res = stmt.executeQuery(sql);
-        res.next();
-        int id=res.getInt("id");
-        String first=res.getString("first");
-        String last=res.getString("last");
-        String email=res.getString("email");
-        String password=res.getString("password");
-        String date=res.getString("registring_date");
-        ObservableList<clientInfo> data= FXCollections.observableArrayList(new clientInfo(first,password,email,date),new clientInfo("test","sss","s","s"),new clientInfo("test","sss","s","s"));
-
-       emailCol.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("email"));
-       nameCol.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("name"));
-        pass.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("password"));
-        dateRe.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("registring_date"));
-        table.setItems(data);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+        addClientInfo();
         //emailCol.se(email);
       //  table.getItems().addAll("a","06",'a',"M");
 
 
+
+    }
+    public void addClientInfo(){
+        Statement stmt = null;
+        ObservableList<clientInfo> data= FXCollections.observableArrayList();
+        try {
+            stmt = conDB.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            String sql = "select * from client";
+            ResultSet res = stmt.executeQuery(sql);
+            while (res.next()){
+            int id=res.getInt("id");
+            String first=res.getString("first");
+            String last=res.getString("last");
+            String email=res.getString("email");
+            String password=res.getString("password");
+            String date=res.getString("registring_date");
+            data.add(new clientInfo(first,password,email,date));
+
+            }
+            emailCol.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("email"));
+            nameCol.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("name"));
+            pass.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("password"));
+            dateRe.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("registring_date"));
+            selectCol.setCellValueFactory(new PropertyValueFactory<clientInfo,CheckBox>("select"));
+            table.setItems(data);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
     }
 }

@@ -1,5 +1,7 @@
 package mainApp;
 
+import javafx.scene.control.CheckBox;
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -9,7 +11,15 @@ import java.util.function.UnaryOperator;
 public class clientInfo {
     private String name;
     private String password, email, registring_date;
+    private CheckBox select;
 
+    public clientInfo(String n, String em, String pass, String date) {
+        this.name = n;
+        this.email = em;
+        this.password = pass;
+        this.registring_date = date;
+        this.select=new CheckBox();
+    }
     public String getPassword() {
         return password;
     }
@@ -25,12 +35,15 @@ public class clientInfo {
         this.registring_date = registring_date;
     }
 
-    public clientInfo(String n, String em, String pass, String date) {
-        this.name = n;
-        this.email = em;
-        this.password = pass;
-        this.registring_date = date;
+    public CheckBox getSelect() {
+        return select;
     }
+
+    public void setSelect(CheckBox select) {
+        this.select = select;
+    }
+
+
 
     public String getName() {
         return name;

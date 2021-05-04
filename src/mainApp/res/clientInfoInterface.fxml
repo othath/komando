@@ -3,28 +3,41 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.clientInterfaceController">
-   <children>
-      <Button layoutX="102.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="NEW CLIENT" />
-      <Button layoutX="231.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="FIND CLIENT" />
-      <Button layoutX="362.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="101.0" text="MODIFY CLIENT" />
-      <AnchorPane layoutX="23.0" layoutY="108.0" prefHeight="333.0" prefWidth="554.0">
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="571.0" stylesheets="@clientInfo.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.clientInterfaceController">
+    <children>
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="58.0" layoutY="15.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" styleClass="newBtn" text="NEW CLIENT">
+         <font>
+            <Font name="Lucida Fax Italic" size="16.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="222.0" layoutY="15.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" styleClass="findBtn" text="FIND CLIENT">
+         <font>
+            <Font name="Lucida Fax Italic" size="16.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="385.0" layoutY="15.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" styleClass="modifyBtn" text="MODIFY CLIENT">
+         <font>
+            <Font name="Lucida Fax Italic" size="16.0" />
+         </font></Button>
+      <AnchorPane layoutX="24.0" layoutY="92.0" prefHeight="315.0" prefWidth="305.0">
          <children>
-            <TableView fx:id="table" layoutX="26.0" prefHeight="218.0" prefWidth="479.0" style="visibility: visible; -fx-border-width: 0;" tableMenuButtonVisible="true">
+            <TableView fx:id="table" layoutX="-6.0" prefHeight="358.0" prefWidth="551.0" style="-fx-alignment: center;" styleClass="tableview" stylesheets="@clientInfo.css" tableMenuButtonVisible="true">
               <columns>
-                <TableColumn fx:id="nameCol" prefWidth="123.0" style="-fx-padding: 15px;" text="NAME" />
-                <TableColumn fx:id="pass" prefWidth="137.0" text="PHOME NUMBER" />
-                  <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="133.0" text="EMAIL" />
-                  <TableColumn fx:id="dateRe" minWidth="0.0" prefWidth="91.0" text="GENDER" />
+                <TableColumn fx:id="selectCol" prefWidth="40.0" style="-fx-alignment: center;">
+                     <graphic>
+                        <CheckBox mnemonicParsing="false" />
+                     </graphic></TableColumn>
+                  <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="83.0" style="-fx-alignment: center;" text="NAME" />
+                <TableColumn fx:id="pass" prefWidth="126.0" sortType="DESCENDING" sortable="false" style="-fx-alignment: center;" text="PHOME  NUMBER" />
+                  <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="193.0" style="-fx-alignment: center;" text="EMAIL" />
+                  <TableColumn fx:id="dateRe" prefWidth="103.0" style="-fx-alignment: center;" text="GENDER" />
               </columns>
                <effect>
                   <ColorAdjust />
                </effect>
             </TableView>
-            <CheckBox layoutX="34.0" layoutY="6.0" mnemonicParsing="false" />
-            <CheckBox layoutX="34.0" layoutY="47.0" mnemonicParsing="false" />
-            <Label fx:id="l" layoutX="142.0" layoutY="245.0" text="Label" />
          </children>
       </AnchorPane>
+
    </children>
 </AnchorPane>

@@ -1,0 +1,56 @@
+.tableview{
+  -fx-background-color:transparent;
+-fx-background-radius:14;
+}
+.table-view .column-header-background{
+        -fx-background-color: #e6e6fa;
+        -fx-background-radius:14 0 0 0;
+    }
+    .table-view .column-header{
+            -fx-size:50px;
+            -fx-border-width: 0 0 10 0;
+            -fx-background-color:transparent;
+        }
+.table-view .table-cell{
+
+    -fx-padding: 15px 0 15px 0px;
+}
+.table-cell {  /*verticale lines*/
+    -fx-border-width: 0;
+}
+.table-row-cell{ /* horiz line*/
+-fx-border-color:transparent;
+-fx-border-width:0.2;
+-fx-padding:0px 0 0 0;
+-fx-font-size:12px;
+-fx-alignment:center;
+
+}
+.table-row-cell:even{
+-fx-background-color:#d3d3d3;
+}
+.table-row-cell:odd{
+-fx-background-color:#e6e6fa;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #add8e6;
+    -fx-text-background-color: black;
+}
+/* idk what does this
+.table-row-cell:highlighted {
+    -fx-background-color: red;
+    -fx-background-radius: 15px;
+}
+*/
+.newBtn,.modifyBtn,.findBtn{
+    -fx-background-radius: 20px;
+
+}
+.newBtn{
+-fx-background-color:#20b2aa;}
+.modifyBtn{
+-fx-background-color:#1e90ff;}
+.findBtn{
+-fx-background-color:#ffd700;
+}
