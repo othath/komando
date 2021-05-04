@@ -45,7 +45,6 @@
 */
 .newBtn,.modifyBtn,.findBtn{
     -fx-background-radius: 20px;
-
 }
 .newBtn{
 -fx-background-color:#20b2aa;}

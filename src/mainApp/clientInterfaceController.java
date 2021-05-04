@@ -38,10 +38,6 @@ public class clientInterfaceController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         addClientInfo();
-        //emailCol.se(email);
-      //  table.getItems().addAll("a","06",'a',"M");
-
-
 
     }
     public void addClientInfo(){
