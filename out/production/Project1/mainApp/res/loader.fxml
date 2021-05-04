@@ -10,17 +10,17 @@
         <Pane prefHeight="350.0" prefWidth="300.0" style="-fx-border-color: white; -fx-border-width: 3px;" />
         <ImageView fx:id="gear1" fitHeight="120.0" fitWidth="120.0" layoutX="40.0" layoutY="42.0">
             <image>
-                <Image url="@../../../../../src/mainApp/res/images/logo.png" />
+                <Image url="@images/logo.png" />
             </image>
         </ImageView>
         <ImageView fx:id="gear3" fitHeight="87.0" fitWidth="86.0" layoutX="113.0" layoutY="158.0">
             <image>
-                <Image url="@../../../../../src/mainApp/res/images/logo.png" />
+                <Image url="@images/logo.png" />
             </image>
         </ImageView>
         <ImageView fx:id="gear2" fitHeight="100.0" fitWidth="106.0" layoutX="153.0" layoutY="76.0">
             <image>
-                <Image url="@../../../../../src/mainApp/res/images/logo.png" />
+                <Image url="@images/logo.png" />
             </image>
         </ImageView>
         <Label fx:id="logo" layoutX="48.0" layoutY="271.0" opacity="0.0" text="Komando" textFill="WHITE">

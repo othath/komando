@@ -8,7 +8,27 @@
     -fx-background-repeat: stretch;
 }
 
-#moreBtn{
+#More{
     -fx-background-image: url("images/Options.png");
         -fx-background-repeat: stretch;
+}
+
+#Support{
+    -fx-background-image: url("images/Contact.png");
+        -fx-background-repeat: stretch;
+}
+
+#Settings{
+    -fx-background-image: url("images/Settings.png");
+        -fx-background-repeat: stretch;
+}
+
+#Cart{
+    -fx-background-image: url("images/Cart.png");
+    -fx-background-repeat: stretch;
+}
+
+#userBtn{
+    -fx-background-image: url("images/User_Icon.png");
+    -fx-background-repeat: stretch;
 }

@@ -84,7 +84,7 @@ public class LogInController {
                         homeclientController.initiateClient(u);
 
                         window.show();
-                        window.setScene(new Scene(root,1020,600));
+                        window.setScene(new Scene(root,1010,600));
                     }
                 }else{
                     userMessage.setText("Account not found !");

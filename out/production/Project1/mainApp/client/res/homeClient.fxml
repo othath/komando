@@ -14,7 +14,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.homeClientController">
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.homeClientController">
    <children>
       <ScrollPane hbarPolicy="NEVER" prefHeight="1225.0" prefWidth="1010.0">
          <content>
@@ -47,11 +48,7 @@
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="68.0" layoutY="5.0">
-                                 <image>
-                                    <Image url="@images/User_Icon.png" />
-                                 </image>
-                              </ImageView>
+                              <Button fx:id="userBtn" layoutX="72.0" layoutY="5.0" mnemonicParsing="false" onAction="#start_transition" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 50%; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 2, 2);" />
                            </children>
                         </Pane>
                      </children>
@@ -163,13 +160,42 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Button fx:id="moreBtn" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 50%; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 2, 2);" stylesheets="@clientHome.css" StackPane.alignment="BOTTOM_RIGHT">
+      <Button fx:id="Support" layoutX="940.0" layoutY="1155.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" rotate="180" style="-fx-background-radius: 50%;" stylesheets="@clientHome.css" StackPane.alignment="BOTTOM_RIGHT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <StackPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </StackPane.margin>
+      </Button>
+      <Button fx:id="Settings" layoutX="940.0" layoutY="1155.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" rotate="180" style="-fx-background-radius: 50%;" stylesheets="@clientHome.css" StackPane.alignment="BOTTOM_RIGHT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <StackPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </StackPane.margin>
+      </Button>
+      <Button fx:id="Cart" layoutX="940.0" layoutY="1155.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" rotate="180" style="-fx-background-radius: 50%;" stylesheets="@clientHome.css" StackPane.alignment="BOTTOM_RIGHT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <StackPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </StackPane.margin>
+      </Button>
+      <Button fx:id="More" mnemonicParsing="false" onAction="#moreOption" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 50%; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 2, 2); -fx-focus-color: transparent;;" stylesheets="@clientHome.css" StackPane.alignment="BOTTOM_RIGHT">
          <StackPane.margin>
             <Insets bottom="20.0" right="20.0" />
          </StackPane.margin>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-      </Button>
+   </Button>
+      <VBox fx:id="sideBar" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: red;" StackPane.alignment="TOP_RIGHT">
+         <StackPane.margin>
+            <Insets right="-300.0" />
+         </StackPane.margin>
+      </VBox>
    </children>
 </StackPane>
