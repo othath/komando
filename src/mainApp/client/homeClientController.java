@@ -6,10 +6,14 @@ import javafx.animation.RotateTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -85,16 +89,14 @@ public class homeClientController{
     @FXML private Button userBtn;
     @FXML private VBox sideBar;
 
-    private boolean clickedOnceSide=false;
+    //private boolean clickedOnceSide=false;
     public void start_transition (){
-        if (!clickedOnceSide){
+        //if (!clickedOnceSide){
             profileTransition(-250);
-            clickedOnceSide=true;
+            //clickedOnceSide=true;
         }
-        else {
+    public void retour_transition(){
             profileTransition(250);
-            clickedOnceSide=false;
-        }
     }
     public void profileTransition(double transitionValue){
         TranslateTransition translate = new TranslateTransition(Duration.millis(700));
@@ -105,5 +107,58 @@ public class homeClientController{
         translate.play();
     }
 
+    @FXML
+    private AnchorPane pane2 ;
+    @FXML
+    private AnchorPane pane3 ;
+    @FXML
+    private AnchorPane pane1 ;
+    @FXML
+    private Label page ;
+
+    public void carousel_animation (double duration, Node node , double width){
+        TranslateTransition animation = new TranslateTransition(Duration.seconds(duration),node);
+        animation.setByX(width);
+        animation.play();
+    }
+
+    int numP = 0 ;
+    @FXML
+    void next(ActionEvent event){
+        if(numP==0){
+            carousel_animation(2,pane3 ,800);
+            numP++;
+            page.setText("2");
+        }
+
+        else if(numP==1){
+            carousel_animation(2,pane2,800);
+            numP++;
+            page.setText("3");
+        }
+    }
+    @FXML
+    void back(ActionEvent event){
+        if(numP==1){
+            carousel_animation(2,pane3 ,-800);
+            numP--;
+            page.setText("1");
+        }
+
+        else if(numP==2){
+            carousel_animation(2,pane2,-800);
+            numP--;
+            page.setText("2");
+        }
+    }
+    @FXML private Button laptops ;
+    public void chooseCategory() throws Exception
+    {
+        LaptopsController l1 = new LaptopsController();
+        Stage stage = (Stage) laptops.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("res/Laptop.fxml"));
+        Scene scene = new Scene(root,1000,600);
+        stage.setScene(scene);
+    }
 
 }

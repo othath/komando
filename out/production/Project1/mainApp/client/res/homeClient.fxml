@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.homeClientController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.homeClientController">
    <children>
       <ScrollPane hbarPolicy="NEVER" prefHeight="1225.0" prefWidth="1010.0">
          <content>
@@ -38,7 +31,7 @@
                                     <Image url="@images/Search_bar.png" />
                                  </image>
                               </ImageView>
-                              <TextField focusTraversable="false" layoutX="41.0" layoutY="7.0" prefHeight="39.0" prefWidth="523.0" promptText="What are you looking for" style="-fx-border-color: #fff;">
+                              <TextField focusTraversable="false" layoutX="29.0" layoutY="7.0" prefHeight="39.0" prefWidth="535.0" promptText="What are you looking for" style="-fx-border-color: #fff;">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -76,7 +69,7 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
-                              <Button fx:id="laptops" layoutX="17.0" layoutY="183.0" mnemonicParsing="false" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
+                              <Button fx:id="laptops" layoutX="17.0" layoutY="183.0" mnemonicParsing="false" onAction="#chooseCategory" opacity="0.0" prefHeight="39.0" prefWidth="198.0">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
@@ -105,21 +98,66 @@
                         </Pane>
                         <Pane prefHeight="400.0" prefWidth="763.0">
                            <children>
-                              <Pane layoutY="14.0" prefHeight="374.0" prefWidth="749.0" style="-fx-background-color: gray; -fx-background-radius: 5px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 2, 2);">
+                              <AnchorPane fx:id="pane1" prefHeight="350.0" prefWidth="763.0">
                                  <children>
-                                    <Button fx:id="rightArrow" layoutX="704.0" layoutY="170.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="44.0">
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                    </Button>
+                                    <ImageView fitHeight="360.0" fitWidth="763.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <image>
+                                          <Image url="@images/gif/supermarket_763x375.jpg" />
+                                       </image></ImageView>
                                  </children>
-                              </Pane>
-                              <Button fx:id="leftArrow" layoutY="172.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="44.0">
+                                 <padding>
+                                    <Insets bottom="15.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pane2" prefHeight="300.0" prefWidth="763.0">
+                                 <children>
+                                    <ImageView fitHeight="375.0" fitWidth="763.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <image>
+                                          <Image url="@images/gif/depositphotos_57934837-Vector-illustration-with-sale-of--womens-clothing_763x400.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane fx:id="pane3" prefHeight="375.0" prefWidth="763.0">
+                                 <children>
+                                    <ImageView fitHeight="400.0" fitWidth="763.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <image>
+                                          <Image url="@images/gif/carousel2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="25.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <Button fx:id="leftArrow" layoutY="172.0" mnemonicParsing="false" onAction="#back" prefHeight="44.0" prefWidth="44.0">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </Button>
+                              <Button fx:id="rightArrow" layoutX="705.0" layoutY="173.0" mnemonicParsing="false" onAction="#next" prefHeight="44.0" prefWidth="44.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label fx:id="page" layoutX="350.0" layoutY="330.0" style="-fx-background-color: white;" text="1" textFill="#4fbc6e">
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="15.0" />
+                           </padding>
                         </Pane>
                      </children>
                   </HBox>
@@ -201,7 +239,7 @@
                   <Image url="@images/Header.png" />
                </image>
             </ImageView>
-            <Button mnemonicParsing="false" onAction="#start_transition" prefHeight="44.0" prefWidth="53.0" style="-fx-background-color: none;">
+            <Button mnemonicParsing="false" onAction="#retour_transition" prefHeight="44.0" prefWidth="53.0" style="-fx-background-color: none;">
                <graphic>
                   <ImageView fitWidth="30.0">
                      <image>
