@@ -20,6 +20,7 @@ public class adminController implements Initializable {
      @FXML private Button dashBoard;
     public void client(ActionEvent a) throws IOException {
             AnchorPane New= FXMLLoader.load(this.getClass().getResource("res/clientInfoInterface.fxml"));
+        clientsInfo.setStyle("-fx-background-color:teal");
             showInterface.getChildren().setAll(New);
             // Stage thisStage = (Stage)this.clientsInfo.getScene().getWindow();
         // thisStage.setScene(scene);
@@ -40,5 +41,6 @@ public class adminController implements Initializable {
     public void dashBoard(ActionEvent e) throws IOException{
         AnchorPane New= FXMLLoader.load(this.getClass().getResource("res/dashBoardInterface.fxml"));
         showInterface.getChildren().setAll(New);
+        dashBoard.setStyle("-fx-background-color:teal");
     }
 }

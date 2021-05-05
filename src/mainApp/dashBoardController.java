@@ -23,9 +23,5 @@ public class dashBoardController {
     }*/
     @FXML private
    Label numberOrder;
-    public void test(ActionEvent a) throws IOException{numberOrder.setText("pf");
-    }
 
-    public void test(javafx.event.ActionEvent a) {numberOrder.setText("pf");
-    }
 }

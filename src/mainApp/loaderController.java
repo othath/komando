@@ -74,8 +74,8 @@ public class loaderController implements Initializable {
         tr.setCycleCount(1);
         tr.setOnFinished(e -> {
                     try {
-                        Parent root = FXMLLoader.load(getClass().getResource("res/appSelector.fxml"));
-                        Stage window = (Stage) gear1.getScene().getWindow();
+                        Parent root = FXMLLoader.load(this.getClass().getResource("res/appSelector.fxml"));
+                        Stage window = (Stage) this.gear1.getScene().getWindow();
                         Scene AppPick = new Scene(root,700,350);
                         window.close();
                         window.setScene(AppPick);

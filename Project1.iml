@@ -16,9 +16,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="src" level="project" />
-    <orderEntry type="library" exported="" name="lib1" level="project" />
-    <orderEntry type="library" exported="" name="lib" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -56,5 +53,6 @@
         <jarDirectory url="jar://C:/Program Files/Java/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/charm-glisten-6.0.6-javadoc.jar!/" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
