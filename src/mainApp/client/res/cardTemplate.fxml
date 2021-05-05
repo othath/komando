@@ -6,13 +6,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.VBox?>
-<VBox prefWidth="187" xmlns:fx="http://javafx.com/fxml">
-    <ImageView fitWidth="187" fitHeight="120">
-        <image>
-            <Image url="@images/laptop.png"/>
-        </image>
+<VBox prefWidth="187" xmlns:fx="http://javafx.com/fxml" fx:controller="mainApp.client.cartTemplateController">
+    <ImageView fitWidth="187" fitHeight="120"  fx:id="image">
+
     </ImageView>
-    <Label>Mac Book but with Windows as OS</Label>
-    <Label>1500$</Label>
+    <Label fx:id="title">Mac Book but with Windows as OS</Label>
+    <Label fx:id="price">1500$</Label>
     <Button>More Details</Button>
 </VBox>

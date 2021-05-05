@@ -25,11 +25,14 @@ public class LaptopsController {
     }
 
     public void initialize() throws Exception {
-        if(output.next()) {
-            for (int i = 0; i < output.getInt(1); i++) {
-                VBox v = FXMLLoader.load(getClass().getResource("res/cardTemplate.fxml"));
+        query = "SELECT image, title, price from product;";
+        output = s.executeQuery(query);
+        while(output.next()) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("res/cardTemplate.fxml"));
+                VBox v = loader.load();
+                cartTemplateController controller = loader.getController();
+                controller.populate(output.getString("image"), output.getString("title"), output.getString("price"));
                 products.getChildren().add(v);
-            }
         }
      }
 }
