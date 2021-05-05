@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<GridPane hgap="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="mainApp.client.LaptopsController" prefHeight="600.0" prefWidth="1000.0">
+    <HBox prefWidth="200" prefHeight="600" GridPane.columnIndex="0"></HBox>
+    <ScrollPane GridPane.columnIndex="1" prefWidth="800" prefHeight="600" hbarPolicy="NEVER">
+        <FlowPane fx:id="products" prefWidth="780" orientation="HORIZONTAL" hgap="10" vgap="10">
+        </FlowPane>
+    </ScrollPane>
+</GridPane>
