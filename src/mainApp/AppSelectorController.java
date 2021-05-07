@@ -9,8 +9,6 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import mainApp.client.LogInController;
 
-import java.io.IOException;
-
 public class AppSelectorController {
     @FXML private Button clientBtn;
     @FXML private Button adminBtn;
@@ -24,9 +22,9 @@ public class AppSelectorController {
         stage.setScene(scene);
     }
     public void adminScene(ActionEvent event) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("res/adminInterface.fxml"));
-        Scene scene=new Scene(root, 800, 450);
-        scene.getStylesheets().add(getClass().getResource("res/adminInterface.css").toExternalForm());
+        Parent root = FXMLLoader.load(getClass().getResource("admin/res/adminInterface.fxml"));
+        Scene scene=new Scene(root, 800, 480);
+        scene.getStylesheets().add(getClass().getResource("admin/res/adminInterface.css").toExternalForm());
         Stage thisStage = (Stage) adminBtn.getScene().getWindow();
         thisStage.setScene(scene);
         //thisStage.show();

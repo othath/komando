@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane hgap="50" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.LogInController">
+<GridPane hgap="50" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.client.LogInController">
     <VBox fx:id="firstColumn" alignment="CENTER_LEFT" prefHeight="600" prefWidth="500" spacing="30" styleClass="firstColumn" GridPane.columnIndex="1">
         <Text fx:id="title" styleClass="Title" text="Sign In :" />
         <TextField fx:id="fullNameField" managed="false" prefHeight="40" promptText="Full Name" styleClass="textField" visible="false" />
@@ -30,7 +31,11 @@
       </Label>
     </VBox>
     <VBox fx:id="secondColumn" alignment="CENTER" prefHeight="600" prefWidth="400" spacing="20" styleClass="secondColumn">
-        <Text styleClass="appName" text="Komando" />
+      <ImageView fitHeight="76.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logotest_1.png" />
+         </image>
+      </ImageView>
         <Text styleClass="description" text="Manage your orders easily" />
     </VBox>
    <columnConstraints>
