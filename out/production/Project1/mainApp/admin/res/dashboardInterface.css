@@ -1,0 +1,13 @@
+/*@font-face{
+font-family:'Montserrat-Light';
+src:url("Montserrat/Montserrat-Light.ttf");}
+.salesActivity,.salesRevenue,.qteSold{
+-fx-font-family:'Montserrat-Light';
+
+}*/
+.numberOrder,.priceOrder,.numberPcs,.info{
+       -fx-border-width: 1;
+    -fx-border-color: #31D35C;
+    -fx-border-radius: 20px;
+  
+}

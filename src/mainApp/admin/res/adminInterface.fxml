@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.admin.adminController">
+   <stylesheets>
+      <URL value="@dashboardInterface.css" />
+      <URL value="@adminInterface.css" />
+   </stylesheets>
+   <Pane fx:id="menuInterface" prefHeight="503.0" prefWidth="233.0">
+      <children>
+         <ImageView fitHeight="80.0" fitWidth="190.0" layoutX="22.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/logotest_1.png" />
+            </image>
+         </ImageView>
+         <Button fx:id="dashBoard" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="153.0" mnemonicParsing="false" onAction="#dashBoard" prefHeight="37.0" prefWidth="233.0" styleClass="dashBoard" text="      DashBoard">
+            <graphic>
+               <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+      
+                  <Image url="@images/dashboard.png" />
+      
+               </ImageView>
+            </graphic></Button>
+         <Button fx:id="clientsInfo" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="216.0" mnemonicParsing="false" onAction="#client" prefHeight="37.0" prefWidth="233.0" styleClass="clientsInfo" text="      Clients info">
+            <graphic>
+               <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+      
+                  <Image url="@images/customer.png" />
+      
+               </ImageView>
+            </graphic></Button>
+         <Button fx:id="inventory" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="340.0" mnemonicParsing="false" onAction="#inventory" prefHeight="37.0" prefWidth="233.0" styleClass="inventory" text="       Inventory">
+            <graphic>
+               <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+      
+                  <Image url="@images/shipping.png" />
+      
+               </ImageView>
+            </graphic></Button>
+         <Button fx:id="orders" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="275.0" mnemonicParsing="false" onAction="#order" prefHeight="37.0" prefWidth="233.0" styleClass="clientsInfo" text="      Orders">
+            <graphic>
+               <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+      
+                  <Image url="@images/checklist.png" />
+      
+               </ImageView>
+            </graphic>
+         </Button>
+      </children>
+   </Pane>
+
+   <AnchorPane fx:id="showInterface" layoutX="234.0" prefHeight="469.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" />
+   <VBox fx:id="menuBtns" layoutX="-219.0" layoutY="320.0" prefHeight="126.0" prefWidth="233.0" style=": teal; -fx-background-color: transparent;" styleClass="Vbox">
+      <children>
+         <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="234.0" styleClass="menuBtns" text="ALL" textAlignment="CENTER">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Button>
+         <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="233.0" styleClass="menuBtns" text="Payment required" textAlignment="CENTER">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Button>
+         <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="59.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="233.0" styleClass="menuBtns" text="Out of stock" textAlignment="CENTER">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Button>
+         <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="108.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="238.0" styleClass="menuBtns" text="Shipped" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Button>
+      </children>
+   </VBox>
+</AnchorPane>
