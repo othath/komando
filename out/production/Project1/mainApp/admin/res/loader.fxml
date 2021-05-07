@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to top right, #31D35C, #2BB7DA);" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.loaderController">
+    <children>
+        <Pane prefHeight="350.0" prefWidth="300.0" style="-fx-border-color: white; -fx-border-width: 3px;">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="234.0" layoutX="42.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+         </children></Pane>
+        <ImageView fx:id="gear1" fitHeight="120.0" fitWidth="120.0" layoutX="40.0" layoutY="42.0">
+            <image>
+                <Image url="@images/logo.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="gear3" fitHeight="87.0" fitWidth="86.0" layoutX="113.0" layoutY="158.0">
+            <image>
+                <Image url="@images/logo.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="gear2" fitHeight="100.0" fitWidth="106.0" layoutX="153.0" layoutY="76.0">
+            <image>
+                <Image url="@images/logo.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="logo" layoutX="48.0" layoutY="271.0" opacity="0.0" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="45.0" />
+            </font>
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logotest_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+        </Label>
+    </children>
+</AnchorPane>
