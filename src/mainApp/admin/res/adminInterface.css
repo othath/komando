@@ -4,19 +4,26 @@ Pane{
 .dashBoard{
        -fx-background-color: transparent;
        -fx-font-size: 20px;
+       -fx-font-weight:700;
+
 }
 .clientsInfo{
        -fx-background-color: transparent;
        -fx-font-size: 20px;
        -fx-cursor: pointer;
+
+-fx-font-weight:700;
+
 }
 .orders{
        -fx-background-color: transparent;
        -fx-font-size: 20px;
+       -fx-font-weight:700;
 }
 .inventory{
        -fx-background-color: transparent;
        -fx-font-size: 20px;
+       -fx-font-weight:700;
 }
 .dashBoard:hover,.clientsInfo:hover,.orders:hover,.inventory:hover,
 .menuBtns:hover{
@@ -24,7 +31,7 @@ Pane{
        -fx-cursor: hand;
 }
 .menuBtns{
-    -fx-background-color:transparent
+    -fx-background-color:transparent;
 }
 
 

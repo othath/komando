@@ -13,10 +13,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setResizable(false);
         primaryStage.setFullScreen(false);
-        Parent loader = FXMLLoader.load(this.getClass().getResource("admin/res/adminInterface.fxml"));
+        Parent loader = FXMLLoader.load(this.getClass().getResource("admin/res/loader.fxml"));
         //primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setTitle("Komando");
-        Scene appLoader = new Scene(loader, 800,500);
+        Scene appLoader = new Scene(loader, 300,350);
         primaryStage.setScene(appLoader);
         primaryStage.show();
     }

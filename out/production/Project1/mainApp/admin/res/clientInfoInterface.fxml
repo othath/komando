@@ -15,7 +15,7 @@
          <font>
             <Font name="Lucida Fax Demibold" size="16.0" />
          </font></Button>
-      <Button alignment="CENTER" layoutX="385.0" layoutY="15.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" styleClass="modifyBtn" text="MODIFY CLIENT">
+      <Button alignment="CENTER" layoutX="385.0" layoutY="15.0" mnemonicParsing="false" onAction="#modify" prefHeight="40.0" prefWidth="150.0" styleClass="modifyBtn" text="MODIFY CLIENT">
          <font>
             <Font name="Lucida Fax Italic" size="16.0" />
          </font></Button>
@@ -25,12 +25,12 @@
               <columns>
                 <TableColumn fx:id="selectCol" prefWidth="40.0" style="-fx-alignment: center;">
                      <graphic>
-                        <CheckBox mnemonicParsing="false" />
+                        <CheckBox fx:id="selectAll" mnemonicParsing="false" />
                      </graphic></TableColumn>
                   <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="83.0" style="-fx-alignment: center;" text="NAME" />
-                <TableColumn fx:id="pass" prefWidth="126.0" sortType="DESCENDING" sortable="false" style="-fx-alignment: center;" text="PHOME  NUMBER" />
+                <TableColumn fx:id="phoneCol" prefWidth="126.0" sortType="DESCENDING" sortable="false" style="-fx-alignment: center;" text="PHOME  NUMBER" />
                   <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="193.0" style="-fx-alignment: center;" text="EMAIL" />
-                  <TableColumn fx:id="dateRe" prefWidth="103.0" style="-fx-alignment: center;" text="GENDER" />
+                  <TableColumn fx:id="GenderCol" prefWidth="103.0" style="-fx-alignment: center;" text="GENDER" />
               </columns>
                <effect>
                   <ColorAdjust />

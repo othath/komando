@@ -1,6 +1,8 @@
 package mainApp.admin;
 
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import mainApp.client.dbConnector;
 
 
@@ -28,22 +31,98 @@ public class clientInterfaceController implements Initializable {
     @FXML private TableColumn<clientInfo,String> nameCol;
     @FXML private TableColumn<clientInfo,String> emailCol;
     @FXML private TableView<clientInfo> table;
-    @FXML private TableColumn<clientInfo,String> pass;
-    @FXML private TableColumn<clientInfo,String> dateRe;
+    @FXML private TableColumn<clientInfo,String> GenderCol;
+    @FXML private TableColumn<clientInfo,String> phoneCol;
     @FXML private TableColumn<clientInfo,CheckBox> selectCol;
-     @FXML private Button newClient;
-    dbConnector connect = new dbConnector();
-    Connection conDB = connect.getConnection();
-
+  @FXML private CheckBox selectAll;
+    private dbConnector connect = new dbConnector();
+    private Connection conDB = connect.getConnection();
+    private ObservableList<clientInfo> data= FXCollections.observableArrayList();
+    private ObservableList<clientInfo> item ;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        selectAll();
         loadData();
+        select();
+    }
+    public void selectAll(){
+        selectAll.selectedProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean oldValue, Boolean newValue) {
+              item= table.getItems();
+      for(clientInfo i:item) {
+          if (selectAll.isSelected()) i.getSelect().setSelected(true);
+          else i.getSelect().setSelected(false);
+      }
+            }
+        });
+    }
+    public void modify() throws IOException, SQLException {
+     /* table.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<clientInfo>() {
+            @Override
+            public void changed(ObservableValue<? extends clientInfo> observableValue, clientInfo clientInfo, clientInfo t1) {
+                clientInfo client = table.getSelectionModel().getSelectedItem();
+                client.getSelect().setSelected(true);
+                System.out.println(client.getPhoneNumber());
+                if(!client.getSelect().isSelected()){
+                    client.getSelect().setSelected(false);
+                    Alert a=new Alert(Alert.AlertType.ERROR);
+                    a.show();
+                }
+        }
+
+        item = table.getItems();
+
+        if(table.getSelectionModel().isSelected(countSelect)){
+        for (clientInfo i : item) {
+            if (i.getSelect().isSelected()) {
+                countSelect++;
+                System.out.println(i.getPhoneNumber());;
+
+            } }}
+        else {
+               // i.getSelect().setSelected(false);
+                Alert a = new Alert(Alert.AlertType.ERROR);
+                a.show();
+
+            }*/
+        clientInfo client=table.getSelectionModel().getSelectedItem();
+
+        FXMLLoader loader= new FXMLLoader(this.getClass().getResource("res/AddView.fxml"));
+        Parent root= loader.load();
+        addClientController modify=loader.getController();
+        modify.setUpdate(true);
+        modify.setInfo(getId(client.getEmail(),client.getName()),client.getName(),client.getName(),client.getEmail(),client.getPassword(),client.getGender(),client.getPhoneNumber());
+        Scene scene=new Scene(root);
+        Stage stage=new Stage();
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(scene);
+        stage.show();
+
+        }
+    public int getId(String e,String f) throws SQLException {
+        Statement last = conDB.createStatement();
+        String query="SELECT * FROM client WHERE first='" +f +"' and email='"+e+"';";
+        ResultSet lastR = last.executeQuery(query);
+        if(lastR.next()){;
+            lastR.getInt("id");}
+        return lastR.getInt("id");
+
+    }
+    public void select() {
+
+        table.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<clientInfo>() {
+            @Override
+            public void changed(ObservableValue<? extends clientInfo> observableValue, clientInfo clientInfo, clientInfo t1) {
+                clientInfo client = table.getSelectionModel().getSelectedItem();
+                client.getSelect().setSelected(true);
+            }
+        });
 
     }
     public void loadData(){
         Statement stmt = null;
-        ObservableList<clientInfo> data= FXCollections.observableArrayList();
+
         try {
             stmt = conDB.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             String sql = "select * from client";
@@ -53,15 +132,18 @@ public class clientInterfaceController implements Initializable {
             String first=res.getString("first");
             String last=res.getString("last");
             String email=res.getString("email");
-            String password=res.getString("password");
+           // String password=res.getString("password");
             String date=res.getString("registring_date");
-            data.add(new clientInfo(first,email,password,date));
+            String gender=res.getString("Gender");
+            String phoneNumber=res.getString("phoneNumber");
+
+            data.add(new clientInfo(first,email,phoneNumber,date,gender));
 
             }
             emailCol.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("email"));
             nameCol.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("name"));
-            pass.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("password"));
-            dateRe.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("registring_date"));
+            phoneCol.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("phoneNumber"));
+            GenderCol.setCellValueFactory(new PropertyValueFactory<clientInfo,String>("gender"));
             selectCol.setCellValueFactory(new PropertyValueFactory<clientInfo,CheckBox>("select"));
             table.setItems(data);
 
@@ -71,9 +153,13 @@ public class clientInterfaceController implements Initializable {
 
     }
     public void newClient(ActionEvent newClient) throws IOException {
-        Parent parent= FXMLLoader.load(this.getClass().getResource("res/AddView.fxml"));
-        Scene scene=new Scene(parent);
+        FXMLLoader loader= new FXMLLoader(this.getClass().getResource("res/AddView.fxml"));
+        Parent root= loader.load();
+        addClientController newclient=loader.getController();
+        newclient.setUpdate(false);
+        Scene scene=new Scene(root);
         Stage stage=new Stage();
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         stage.show();
 

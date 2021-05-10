@@ -19,31 +19,40 @@
                <Image url="@images/logotest_1.png" />
             </image>
          </ImageView>
-         <Button fx:id="dashBoard" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="153.0" mnemonicParsing="false" onAction="#dashBoard" prefHeight="37.0" prefWidth="233.0" styleClass="dashBoard" text="      DashBoard">
+         <Button fx:id="dashBoard" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="153.0" mnemonicParsing="false" onAction="#dashBoard" prefHeight="37.0" prefWidth="233.0" style="-fx-font-weight: 700;" styleClass="dashBoard" text=" DashBoard" textFill="WHITE">
             <graphic>
                <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-      
+
                   <Image url="@images/dashboard.png" />
-      
+
                </ImageView>
-            </graphic></Button>
-         <Button fx:id="clientsInfo" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="216.0" mnemonicParsing="false" onAction="#client" prefHeight="37.0" prefWidth="233.0" styleClass="clientsInfo" text="      Clients info">
+            </graphic>
+            <font>
+               <Font name="System Italic" size="12.0" />
+            </font></Button>
+         <Button fx:id="clientsInfo" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="216.0" mnemonicParsing="false" onAction="#client" prefHeight="37.0" prefWidth="233.0" style="-fx-font-weight: 700;" styleClass="clientsInfo" text=" Clients info" textFill="WHITE">
             <graphic>
                <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-      
+
                   <Image url="@images/customer.png" />
-      
+
                </ImageView>
-            </graphic></Button>
-         <Button fx:id="inventory" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="340.0" mnemonicParsing="false" onAction="#inventory" prefHeight="37.0" prefWidth="233.0" styleClass="inventory" text="       Inventory">
+            </graphic>
+            <font>
+               <Font name="System Italic" size="12.0" />
+            </font></Button>
+         <Button fx:id="inventory" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="340.0" mnemonicParsing="false" onAction="#inventory" prefHeight="37.0" prefWidth="233.0" style="-fx-font-weight: 700;" styleClass="inventory" text=" Inventory" textFill="WHITE">
             <graphic>
                <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-      
+
                   <Image url="@images/shipping.png" />
-      
+
                </ImageView>
-            </graphic></Button>
-         <Button fx:id="orders" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="275.0" mnemonicParsing="false" onAction="#order" prefHeight="37.0" prefWidth="233.0" styleClass="clientsInfo" text="      Orders">
+            </graphic>
+            <font>
+               <Font name="System Italic" size="12.0" />
+            </font></Button>
+         <Button fx:id="orders" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="275.0" mnemonicParsing="false" onAction="#order" prefHeight="37.0" prefWidth="233.0" style="-fx-font-weight: 700;" styleClass="orders" text=" Orders" textFill="WHITE">
             <graphic>
                <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
       
@@ -51,40 +60,43 @@
       
                </ImageView>
             </graphic>
+            <font>
+               <Font name="System Italic" size="12.0" />
+            </font>
          </Button>
       </children>
    </Pane>
 
-   <AnchorPane fx:id="showInterface" layoutX="234.0" prefHeight="469.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" />
+   <AnchorPane fx:id="showInterface" layoutX="234.0" prefHeight="469.0" prefWidth="579.0" style="-fx-font-weight: 900;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" />
    <VBox fx:id="menuBtns" layoutX="-219.0" layoutY="320.0" prefHeight="126.0" prefWidth="233.0" style=": teal; -fx-background-color: transparent;" styleClass="Vbox">
       <children>
-         <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="234.0" styleClass="menuBtns" text="ALL" textAlignment="CENTER">
+         <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="234.0" styleClass="menuBtns" text="       ALL" textAlignment="CENTER" textFill="WHITE">
             <VBox.margin>
                <Insets />
             </VBox.margin>
             <font>
-               <Font name="System Bold" size="13.0" />
+               <Font size="13.0" />
             </font>
          </Button>
-         <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="233.0" styleClass="menuBtns" text="Payment required" textAlignment="CENTER">
+         <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="233.0" styleClass="menuBtns" text="       Payment required" textAlignment="CENTER" textFill="WHITE">
             <VBox.margin>
                <Insets />
             </VBox.margin>
             <font>
-               <Font name="System Bold" size="13.0" />
+               <Font size="13.0" />
             </font>
          </Button>
-         <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="59.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="233.0" styleClass="menuBtns" text="Out of stock" textAlignment="CENTER">
+         <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="59.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="233.0" styleClass="menuBtns" text="       Out of stock" textAlignment="CENTER" textFill="WHITE">
             <VBox.margin>
                <Insets />
             </VBox.margin>
             <font>
-               <Font name="System Bold" size="13.0" />
+               <Font size="13.0" />
             </font>
          </Button>
-         <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="108.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="238.0" styleClass="menuBtns" text="Shipped" textAlignment="CENTER">
+         <Button alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="108.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="238.0" styleClass="menuBtns" text="       Shipped" textAlignment="CENTER" textFill="WHITE">
             <font>
-               <Font name="System Bold" size="13.0" />
+               <Font size="13.0" />
             </font>
          </Button>
       </children>

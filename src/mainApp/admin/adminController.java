@@ -32,7 +32,7 @@ public class adminController implements Initializable {
     @FXML
     private VBox menuBtns;
     @FXML
-    Label label;
+
   private int count=1;
 
     @Override
@@ -69,6 +69,7 @@ public class adminController implements Initializable {
         btnVisited(clientsInfo, dashBoard, inventory, orders);
         showInterface.getChildren().setAll(New);
         menuBtns.setVisible(false);
+        inventory.setLayoutY(340);
 
         /* Stage thisStage = (Stage)this.clientsInfo.getScene().getWindow();
         thisStage.setScene(scene);*/
