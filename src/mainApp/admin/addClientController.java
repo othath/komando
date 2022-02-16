@@ -39,6 +39,7 @@ public class addClientController implements Initializable {
   private int ID;
   private  dbConnector connect = new dbConnector();
    private Connection conDB = connect.getConnection();
+
     private String Sql=null;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
